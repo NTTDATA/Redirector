@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <EditRedirectForm>
+    <FormDialog Icon="core2/32x32/go2.png" Header="Edit Redirect" Text="Create or Edit Sitecore Item redirects" OKButton="OK">
+      <CodeBeside Type="Revere.Redirector.ClientUI.EditRedirectorForm,Revere.Redirector"/>
+      <DataContext ID="ContentDataContext" DataViewName="Master" Root="{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}" Filter=""/>
+      <GridPanel Width="100%"  >
+
+        <Groupbox Header="Enter the old URL" Padding="16px 4px 4px 4px" >
+          <Edit ID="OldUrlEdit" Width="100%"/>
+          <Literal Text="ex. /path/to/file.ext?a=1&amp;b=2" />
+        </Groupbox>
+        <Groupbox Header="Choose the Item you wish to redirect to" Padding="16px 4px 4px 4px">
+          
+          <TreePicker ID="ItemPicker" DataContext="ContentDataContext" SelectOnly="true" AllowNone="true" Width="100%"/>
+        </Groupbox>
+        <Groupbox Header="Optional Redirect Querystring" Padding="16px 4px 4px 4px">
+          <Edit ID="QueryStringEdit" Width="100%"/>
+          <Literal Text="ex. a=1&amp;b=2" />
+        </Groupbox>
+      </GridPanel>
+    </FormDialog>
+  </EditRedirectForm>
+</control>
+    
+    
