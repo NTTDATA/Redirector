@@ -1,4 +1,4 @@
-Redirectory
+Redirector
 ==================
 
 Sitecore module that supports 301 redirects using database mapping, regular expressions and custom rules
