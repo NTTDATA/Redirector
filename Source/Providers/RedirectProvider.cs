@@ -86,7 +86,7 @@ namespace NTTData.Redirector.Providers
             using (RedirectorDbContext db = new RedirectorDbContext())
             {
                 db.RedirectEntries.Attach(entry);
-                db.Entry<RedirectEntry>(entry).State = System.Data.EntityState.Modified;
+                db.Entry<RedirectEntry>(entry).State = System.Data.Entity.EntityState.Modified;
                 db.SaveChanges();
             }
         }
