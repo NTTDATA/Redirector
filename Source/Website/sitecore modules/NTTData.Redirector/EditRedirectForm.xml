@@ -2,7 +2,7 @@
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
   <EditRedirectForm>
     <FormDialog Icon="core2/32x32/go2.png" Header="Edit Redirect" Text="Create or Edit Sitecore Item redirects" OKButton="OK">
-      <CodeBeside Type="Revere.Redirector.ClientUI.EditRedirectorForm,Revere.Redirector"/>
+      <CodeBeside Type="NTTData.Redirector.ClientUI.EditRedirectorForm,NTTData.Redirector"/>
       <DataContext ID="ContentDataContext" DataViewName="Master" Root="{0DE95AE4-41AB-4D01-9EB0-67441B7C2450}" Filter=""/>
       <GridPanel Width="100%"  >
 
