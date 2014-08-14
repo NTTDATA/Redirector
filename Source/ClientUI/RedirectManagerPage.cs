@@ -76,7 +76,7 @@ namespace NTTData.Redirector.ClientUI
             Assert.ArgumentNotNull(e, "e");
             base.OnLoad(e);
             //Assert.CanRunApplication("Security/User Manager");
-            IEnumerable<RedirectGridEntry> redirects = RedirectManager.GetRedirects().ToList().Select(re => new RedirectGridEntry(re));
+            IEnumerable<RedirectGridEntry> redirects = RedirectManager.GetRedirects().ToList().Select(re => new RedirectGridEntry(re)).Where(re => !String.IsNullOrEmpty(re.Site));
             ComponentArtGridHandler<RedirectGridEntry>.Manage(this.Redirects, new GridSource<RedirectGridEntry>(redirects), this.RebindRequired);
             this.Redirects.LocalizeGrid();
         }
